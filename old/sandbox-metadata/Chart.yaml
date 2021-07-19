@@ -1,0 +1,5 @@
+apiVersion: v2
+appVersion: "1.0"
+description: A Helm chart for GHGA's metadata sandbox service
+name: sandbox-metadata
+version: 0.0.1

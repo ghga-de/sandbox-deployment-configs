@@ -1,0 +1,9 @@
+# This file contains all configurable values for the whole chart and subcharts.
+# It is intended to be overriden by anoter values-xx.yaml file when instantiating the chart, like so
+# helm template -f values.yaml -f values-dev.yaml . 
+
+imageCredentials:
+  registry: quay.io
+  username: someone
+  password: sillyness
+  email: someone@host.com

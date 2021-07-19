@@ -1,0 +1,25 @@
+{{- define "ghga-library.deployment.tpl" -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name | printf "%s-%s" .Chart.Name }}
+data: {}
+{{- end -}}
+{{- define "ghga-library.deployment" -}}
+{{- include "common.util.merge" (append . "ghga-library.deployment.tpl") -}}
+{{- end -}}
+
+
+
+{{- template "common.deployment" (list . "demo.deployment") -}}
+{{- define "ghga-library.deployment" -}}
+## Define overrides for your Deployment resource here, e.g.
+kind: Deployment
+spec:
+  template:
+    metadata:
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
+# spec:
+#   replicas: {{ .Values.replicaCount }}
+{{- end -}}

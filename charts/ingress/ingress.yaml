@@ -1,0 +1,39 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: api
+  namespace: foundation
+spec:
+  rules:
+  - host: sandbox.api.ghga-dev.de
+    http:
+      paths:
+      - path: /metadata
+        pathType: Prefix
+        backend:
+          serviceName: sandbox-metadata
+          servicePort: 80
+      - path: /request
+        pathType: Prefix
+        backend:
+          serviceName: sandbox-request
+          servicePort: 80
+      - path: /authorisation
+        pathType: Prefix
+        backend:
+          serviceName: sandbox-authorisation
+          servicePort: 80
+      - path: /notification
+        pathType: Prefix
+        backend:
+          serviceName: sandbox-notification
+          servicePort: 80
+      - path: /storage
+        pathType: Prefix
+        backend:
+          serviceName: sandbox-storage
+          servicePort: 80
+  tls:
+  - hosts:
+    - sandbox.api.ghga-dev.de
+  - secretName: sandbox-services-tls

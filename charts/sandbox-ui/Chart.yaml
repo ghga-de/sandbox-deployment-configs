@@ -1,4 +1,4 @@
-name: ghga-sandbox-ui
+name: sandbox-ui
 description: Service that delivers a simple web app for interacting with the sandbox system.
 
 # A chart can be either an 'application' or a 'library' chart.

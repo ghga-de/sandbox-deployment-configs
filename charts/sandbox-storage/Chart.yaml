@@ -1,4 +1,4 @@
-name: ghga-sandbox-storage
+name: sandbox-storage
 description: An implementation of the GA4GH DRS specs for controlled access to files on S3.
 
 # A chart can be either an 'application' or a 'library' chart.

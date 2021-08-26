@@ -1,4 +1,4 @@
-name: ghga-sandbox-notification
+name: sandbox-notification
 description: A service that offers asynchronous notifications via email to other services.
 
 # A chart can be either an 'application' or a 'library' chart.

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Chart.Name }}
+  name: ghga-{{ .Chart.Name }}
   labels:
     category: test
 spec:

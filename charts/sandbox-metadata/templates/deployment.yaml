@@ -21,11 +21,11 @@ spec:
         image: ghga/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
         ports:
         - name: http
-          containerPort: 8080
+          containerPort: 4000
           protocol: TCP
         volumeMounts:
         - name: config
-          mountPath: "/service"
+          mountPath: "/home/appuser"
           readOnly: true
       volumes:
       - name: config

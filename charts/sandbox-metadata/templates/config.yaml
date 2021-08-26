@@ -5,7 +5,7 @@ metadata:
 data:
   .metadata_service.yaml: |
     host: "127.0.0.1"
-    port: 8080
+    port: 4000
     log_level: info
     auto_reload: false
     workers: 1

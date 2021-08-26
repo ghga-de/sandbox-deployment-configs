@@ -1,4 +1,4 @@
-name: sandbox-request
+name: ghga-sandbox-request
 description: A service that works as an interaction platform for data requesters and data stewards.
 
 # A chart can be either an 'application' or a 'library' chart.

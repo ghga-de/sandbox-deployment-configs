@@ -1,4 +1,4 @@
-name: sandbox-metadata
+name: ghga-sandbox-metadata
 description: Service that handles the metadata and the related functionalities.
 
 # A chart can be either an 'application' or a 'library' chart.

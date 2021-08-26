@@ -17,9 +17,17 @@ spec:
         app: {{ .Chart.Name }}
     spec:
       containers:
-        - name: {{ .Chart.Name }}
-          image: ghga/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
-          ports:
-            - name: http
-              containerPort: 8000
-              protocol: TCP
+      - name: {{ .Chart.Name }}
+        image: ghga/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+        volumeMounts:
+        - name: config
+          mountPath: "/app"
+          readOnly: true
+      volumes:
+      - name: config
+        configMap:
+          name: {{ .Chart.Name }}

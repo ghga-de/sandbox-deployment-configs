@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Chart.Name }}
+data:
+  .sandbox_ui.yaml: |
+    host: localhost
+    port: 8080
+    welcome_info: |
+      This web app is part of an implementation study.
+      It only contains basic functionalities and shouldn't be used
+      for production.

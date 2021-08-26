@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: {{ .Chart.Name }}
 data:
-  .metadata_service.yaml: |
+  .sandbox_metadata.yaml: |
     host: "127.0.0.1"
     port: 8080
     log_level: info

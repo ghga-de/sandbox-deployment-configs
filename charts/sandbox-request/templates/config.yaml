@@ -15,3 +15,6 @@ data:
     cors_allow_credentials: true
     cors_allowed_methods: ["*"]
     cors_allowed_headers: ["*"]
+    rabbitmq_host: "rabbitmq"
+    rabbitmq_port: 5672
+    downloadreq_topic_name: "download_request"

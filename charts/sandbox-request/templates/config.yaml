@@ -19,8 +19,8 @@ data:
     downloadreq_topic_name: download_request
     services: {}
 
-    rabbitmq_host: = rabbitmq
-    rabbitmq_port: = 5672
+    rabbitmq_host: ghga-rabbitmq.foundation
+    rabbitmq_port: 5672
 
     data_requester_email: test@example.com
     data_requester_name: Data Requester

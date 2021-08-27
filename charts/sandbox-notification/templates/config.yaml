@@ -8,7 +8,7 @@ data:
     smtp_port: 587
     sender_email: your-email-here
 
-    rabbitmq_host: localhost
+    rabbitmq_host: ghga-rabbitmq.foundation
     rabbitmq_port: 5672
     topic_name: send_notification
     max_attempts: 5

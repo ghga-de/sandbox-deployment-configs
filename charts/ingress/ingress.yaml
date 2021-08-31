@@ -30,7 +30,7 @@ spec:
         backend:
           serviceName: ghga-sandbox-storage
           servicePort: 80
-  tls:
-  - hosts:
-    - sandbox.api.ghga-dev.de
-  - secretName: sandbox-services-tls
+  # tls:
+  # - hosts:
+  #   - sandbox.api.ghga-dev.de
+  # - secretName: sandbox-services-tls

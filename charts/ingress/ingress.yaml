@@ -20,11 +20,6 @@ spec:
         backend:
           serviceName: ghga-sandbox-request
           servicePort: 80
-      - path: /authorisation(/|$)(.*)
-        pathType: Prefix
-        backend:
-          serviceName: ghga-sandbox-authorisation
-          servicePort: 80
       - path: /notification(/|$)(.*)
         pathType: Prefix
         backend:

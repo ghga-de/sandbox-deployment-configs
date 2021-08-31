@@ -13,27 +13,27 @@ spec:
       - path: /metadata
         pathType: Prefix
         backend:
-          serviceName: sandbox-metadata
+          serviceName: ghga-sandbox-metadata
           servicePort: 80
       - path: /request(/|$)(.*)
         pathType: Prefix
         backend:
-          serviceName: sandbox-request
+          serviceName: ghga-sandbox-request
           servicePort: 80
       - path: /authorisation(/|$)(.*)
         pathType: Prefix
         backend:
-          serviceName: sandbox-authorisation
+          serviceName: ghga-sandbox-authorisation
           servicePort: 80
       - path: /notification(/|$)(.*)
         pathType: Prefix
         backend:
-          serviceName: sandbox-notification
+          serviceName: ghga-sandbox-notification
           servicePort: 80
       - path: /storage(/|$)(.*)
         pathType: Prefix
         backend:
-          serviceName: sandbox-storage
+          serviceName: ghga-sandbox-storage
           servicePort: 80
   tls:
   - hosts:

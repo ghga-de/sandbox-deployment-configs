@@ -1,6 +1,8 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
   name: api
   namespace: sandbox
 spec:
@@ -13,22 +15,22 @@ spec:
         backend:
           serviceName: sandbox-metadata
           servicePort: 80
-      - path: /request
+      - path: /request(/|$)(.*)
         pathType: Prefix
         backend:
           serviceName: sandbox-request
           servicePort: 80
-      - path: /authorisation
+      - path: /authorisation(/|$)(.*)
         pathType: Prefix
         backend:
           serviceName: sandbox-authorisation
           servicePort: 80
-      - path: /notification
+      - path: /notification(/|$)(.*)
         pathType: Prefix
         backend:
           serviceName: sandbox-notification
           servicePort: 80
-      - path: /storage
+      - path: /storage(/|$)(.*)
         pathType: Prefix
         backend:
           serviceName: sandbox-storage

@@ -11,7 +11,7 @@ spec:
   - host: sandbox.api.ghga-dev.de
     http:
       paths:
-      - path: /metadata
+      - path: /metadata(/|$)(.*)
         pathType: ImplementationSpecific
         backend:
           serviceName: ghga-sandbox-metadata

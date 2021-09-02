@@ -17,12 +17,20 @@ spec:
         app: {{ .Chart.Name }}
     spec:
       containers:
-      - name: {{ .Chart.Name }}
+      - name: {{ .Chart.Name }}-rest-api
         image: ghga/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
+        command: ["rest-api"]
         ports:
         - name: http
           containerPort: 8080
           protocol: TCP
+        volumeMounts:
+        - name: config
+          mountPath: "/home/appuser"
+          readOnly: true
+      - name: {{ .Chart.Name }}-async-api
+        image: ghga/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
+        command: ["async-api"]
         volumeMounts:
         - name: config
           mountPath: "/home/appuser"

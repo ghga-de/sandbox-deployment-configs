@@ -15,3 +15,7 @@ data:
     cors_allow_credentials: true
     cors_allowed_methods: ["*"]
     cors_allowed_headers: ["*"]
+    fastapi_options:
+      root_path: /metadata
+      openapi_url: /openapi.json
+      docs_url: /docs

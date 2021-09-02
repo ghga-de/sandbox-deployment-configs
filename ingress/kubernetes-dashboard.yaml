@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kubernetes-dashboard
+  namespace: kubernetes-dashboard
+spec:
+  rules:
+  - host: kubernetes-dashboard.ghga-dev.de
+    http:
+      paths:
+      - backend:
+          serviceName: kubernetes-dashboard
+          servicePort: 443
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - kubernetes-dashboard.ghga-dev.de
+  - secretName: kubernetes-dashboard-tls

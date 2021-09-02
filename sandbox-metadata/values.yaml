@@ -6,3 +6,8 @@ mongodb:
     - dockerhub
   auth:
     enabled: false
+mongo-express:
+  imagePullSecrets: 
+  - dockerhub
+  mongodbEnableAdmin: true
+  mongodbServer: "sandbox-metadata-mongodb"

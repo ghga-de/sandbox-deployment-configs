@@ -13,7 +13,7 @@ jobs:
     if: github.event.action == 'new_app_version'
     runs-on: ubuntu-latest
     env:
-      CHART_YAML: "./charts/${{ github.event.client_payload.chart_name }}/Chart.yaml"
+      CHART_YAML: "./${{ github.event.client_payload.chart_name }}/Chart.yaml"
       NEW_APP_VERSION: "${{ github.event.client_payload.new_app_version }}"
     steps:
     - name: Check out code

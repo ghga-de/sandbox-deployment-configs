@@ -24,4 +24,11 @@ appVersion: "0.0.0-24-eab3f9c-dev"
 
 # The major version of the API. Minor versions and patches are not relevant as they do not 
 # introduce breaking changes.
-apiVersion: v1
+apiVersion: v2
+dependencies:
+  - name: mongodb
+    version: 10.25.x
+    repository: https://charts.bitnami.com/bitnami
+  - name: mongo-express
+    version: 2.6.x
+    repository: https://cowboysysop.github.io/charts

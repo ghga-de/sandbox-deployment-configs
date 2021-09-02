@@ -3,19 +3,19 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
-  name: mongo-metadata
+  name: mongo-request
   namespace: sandbox
 spec:
   rules:
-  - host: mongo-metadata.ghga-dev.de
+  - host: mongo-request.ghga-dev.de
     http:
       paths:
       - backend:
-          serviceName: {{ .Chart.Name }}-mongo-metadata
+          serviceName: {{ .Chart.Name }}-mongo-request
           servicePort: 8081
         path: /
         pathType: ImplementationSpecific
   tls:
   - hosts:
-    - mongo-metadata.ghga-dev.de
-  - secretName: mongo-metadata-tls
+    - mongo-request.ghga-dev.de
+  - secretName: mongo-request-tls

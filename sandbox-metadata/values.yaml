@@ -1,1 +1,6 @@
 replicaCount: 3
+mongodb:
+  global:
+    storageClass: csi-cinder-sc-retain
+    imagePullSecrets: 
+    - dockerhub

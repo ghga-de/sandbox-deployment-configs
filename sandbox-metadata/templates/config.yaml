@@ -9,7 +9,7 @@ data:
     log_level: info
     auto_reload: false
     workers: 1
-    db_url: mongodb://localhost:27017
+    db_url: mongodb://sandbox-metadata-mongodb:27017
     db_name: metadata
     cors_allowed_origins: ["*"]
     cors_allow_credentials: true

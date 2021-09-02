@@ -11,7 +11,7 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: mongo-express
+          serviceName: {{ .Chart.Name }}-mongo-express
           servicePort: 8081
         path: /
         pathType: ImplementationSpecific

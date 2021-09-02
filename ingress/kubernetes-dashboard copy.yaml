@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: rabbitmq-dashboard
+  namespace: foundation
+spec:
+  rules:
+  - host: rabbitmq-dashboard.ghga-dev.de
+    http:
+      paths:
+      - backend:
+          serviceName: ghga-rabbitmq
+          servicePort: 15672
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - rabbitmq-dashboard.ghga-dev.de
+  - secretName: rabbitmq-dashboard-tls

@@ -24,7 +24,7 @@ appVersion: "0.0.0-52-9ea1702-dev"
 
 # The major version of the API. Minor versions and patches are not relevant as they do not 
 # introduce breaking changes.
-apiVersion: v1
+apiVersion: v2
 dependencies:
   - name: mongodb
     version: 10.25.x

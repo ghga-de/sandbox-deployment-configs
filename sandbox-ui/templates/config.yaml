@@ -10,3 +10,6 @@ data:
       This web app is part of an implementation study.
       It only contains basic functionalities and shouldn't be used
       for production.
+    svc_metadata_url: "https://sandbox.api.ghga-dev.de/metadata"
+    svc_storage_url: "https://sandbox.api.ghga-dev.de/storage"
+    svc_request_url: "https://sandbox.api.ghga-dev.de/request"

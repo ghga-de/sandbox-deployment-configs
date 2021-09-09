@@ -19,4 +19,4 @@ spec:
   tls:
   - hosts:
     - mongo-metadata.ghga-dev.de
-  - secretName: mongo-metadata-tls
+    secretName: mongo-metadata-tls

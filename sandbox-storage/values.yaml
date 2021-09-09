@@ -11,5 +11,5 @@ pgweb:
   imagePullSecrets:
   - name: dockerhub
   env:
-  - name: database_url
+  - name: DATABASE_URL
     value: postgres://admin:admin@sandbox-storage-postgresql:5432/storage?sslmode=disable

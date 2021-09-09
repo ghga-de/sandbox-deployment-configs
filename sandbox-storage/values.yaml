@@ -8,6 +8,7 @@ postgresql:
   postgresqlUsername: admin
   postgresqlPassword: admin
 pgweb:
-  imagePullSecrets: ["dockerhub"]
+  imagePullSecrets:
+  - name: dockerhub
   env:
   - DATABASE_URL=postgres://admin:admin@sandbox-storage-postgres:5432/storage?sslmode=disable

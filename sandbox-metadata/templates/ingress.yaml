@@ -3,7 +3,6 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt-prod
   name: mongo-metadata
   namespace: sandbox
 spec:
@@ -19,4 +18,4 @@ spec:
   tls:
   - hosts:
     - mongo-metadata.ghga-dev.de
-    secretName: mongo-metadata-tls
+    secretName: ghga-dev-internal

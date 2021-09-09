@@ -24,4 +24,11 @@ appVersion: "0.0.0-96-05169d6-dev"
 
 # The major version of the API. Minor versions and patches are not relevant as they do not 
 # introduce breaking changes.
-apiVersion: v1
+apiVersion: v2
+dependencies:
+  - name: postgresql
+    version: 10.9.x
+    repository: https://charts.bitnami.com/bitnami
+  - name: pgweb
+    version: 0.0.5
+    repository: https://slamdev.github.io/helm-charts

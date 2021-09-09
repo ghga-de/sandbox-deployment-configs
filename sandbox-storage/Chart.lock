@@ -1,0 +1,9 @@
+dependencies:
+- name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 10.9.5
+- name: pgweb
+  repository: https://slamdev.github.io/helm-charts
+  version: 0.0.5
+digest: sha256:edd0bded3fa0e0fda9f54d80a36b93f231d48b056ff45dd3924a899ee32defbc
+generated: "2021-09-09T08:55:32.4988535+02:00"

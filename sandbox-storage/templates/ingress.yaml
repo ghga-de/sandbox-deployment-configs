@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: pgweb-storage
+  namespace: sandbox
+spec:
+  rules:
+  - host: pgweb-storage.ghga-dev.de
+    http:
+      paths:
+      - backend:
+          serviceName: {{ .Chart.Name }}-pgweb
+          servicePort: 80
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - pgweb-storage.ghga-dev.de
+  - secretName: pgweb-storage-tls

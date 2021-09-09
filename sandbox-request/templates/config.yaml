@@ -16,7 +16,7 @@ data:
     db_url: mongodb://sandbox-request-mongodb:27017
     db_name: request
 
-    svc_metadata_url: http://sandbox-metadata:80
+    svc_metadata_url: http://sandbox-metadata:8080
 
     rabbitmq_host: ghga-rabbitmq.foundation
     rabbitmq_port: 5672

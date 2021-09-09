@@ -16,8 +16,7 @@ data:
     db_url: mongodb://sandbox-request-mongodb:27017
     db_name: request
 
-    downloadreq_topic_name: download_request
-    services: {}
+    svc_metadata_url: http://sandbox-metadata:80
 
     rabbitmq_host: ghga-rabbitmq.foundation
     rabbitmq_port: 5672

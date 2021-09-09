@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: sandbox-ca
+spec:
+  secretName: sandbox-ca-tls
+  commonName: sandbox.svc.cluster.local
+  usages:
+    - server auth
+    - client auth
+  isCA: true
+  issuerRef:
+    name: self-signed
+    kind: ClusterIssuer

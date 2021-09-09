@@ -5,9 +5,8 @@ metadata:
 spec:
   secretName: ghga-dev-internal
   dnsNames:
-  - "*.[namespace].svc.cluster.local"
-  - "*.[namespace]"
+  - "*.sandbox.svc.cluster.local"
+  - "*.sandbox"
   - "*.ghga-dev.de"
   issuerRef:
-    name: self-signed
-    kind: ClusterIssuer
+    name: sandbox-ca-issuer

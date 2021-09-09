@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: ghga-dev-internal
+spec:
+  secretName: ghga-dev-internal
+  dnsNames:
+  - "*.[namespace].svc.cluster.local"
+  - "*.[namespace]"
+  - "*.ghga-dev.de"
+  issuerRef:
+    name: self-signed
+    kind: ClusterIssuer

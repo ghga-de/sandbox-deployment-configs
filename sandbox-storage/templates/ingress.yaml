@@ -19,4 +19,4 @@ spec:
   tls:
   - hosts:
     - pgweb-storage.ghga-dev.de
-  - secretName: pgweb-storage-tls
+    secretName: mongo-request-tlspgweb-storage-tls

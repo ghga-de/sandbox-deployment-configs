@@ -16,4 +16,4 @@ spec:
   tls:
   - hosts:
     - kubernetes-dashboard.ghga-dev.de
-  - secretName: kubernetes-dashboard-tls
+    secretName: mongo-request-tlskubernetes-dashboard-tls

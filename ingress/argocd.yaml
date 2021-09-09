@@ -19,4 +19,4 @@ spec:
   tls:
   - hosts:
     - argo.ghga-dev.de
-  - secretName: argocd-tls
+    secretName: mongo-request-tlsargocd-tls

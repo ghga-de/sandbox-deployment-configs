@@ -19,4 +19,4 @@ spec:
   tls:
   - hosts:
     - mongo-request.ghga-dev.de
-  - secretName: mongo-request-tls
+    secretName: mongo-request-tlsmongo-request-tls

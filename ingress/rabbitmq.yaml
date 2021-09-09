@@ -19,4 +19,4 @@ spec:
   tls:
   - hosts:
     - rabbitmq-dashboard.ghga-dev.de
-  - secretName: rabbitmq-dashboard-tls
+    secretName: mongo-request-tlsrabbitmq-dashboard-tls

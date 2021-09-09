@@ -19,4 +19,4 @@ spec:
   tls:
   - hosts:
     - sandbox-ui.ghga-dev.de
-  - secretName: sandbox-ui-tls
+    secretName: mongo-request-tlssandbox-ui-tls

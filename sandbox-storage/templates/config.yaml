@@ -13,3 +13,4 @@ data:
     cors_allow_credentials: true
     cors_allowed_methods: ["*"]
     cors_allowed_headers: ["*"]
+    db_path: postgres://admin:admin@sandbox-storage-postgresql:5432/storage?sslmode=disable

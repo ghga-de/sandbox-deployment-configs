@@ -3,7 +3,9 @@ kind: Deployment
 metadata:
   name: {{ .Chart.Name }}
   labels:
-    category: test
+    app: {{ .Chart.Name }}
+  annotations:
+    checksum/config: {{ include (print $.Template.BasePath "/config.yaml") . | sha256sum }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:

@@ -21,6 +21,17 @@ spec:
       containers:
       - name: {{ .Chart.Name }}
         image: ghga/{{ .Chart.Name }}:{{ .Chart.AppVersion }}
+        env:
+        - name: SANDBOX_NOTIFICATION_SMTP_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: sandbox-notification-smtp-credentials
+              key: smtp_username
+        - name: SANDBOX_NOTIFICATION_SMTP_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: sandbox-notification-smtp-credentials
+              key: smtp_password
         ports:
         - name: http
           containerPort: 8080
@@ -33,3 +44,4 @@ spec:
       - name: config
         configMap:
           name: {{ .Chart.Name }}
+sandbox-notification-smtp-credentials

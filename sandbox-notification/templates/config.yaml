@@ -13,8 +13,3 @@ data:
     topic_name: send_notification
     max_attempts: 5
     log_level: info
-
-    # Warning, these secrets are better specified
-    # via environment variables or file secrets:
-    smtp_username: your-username-here
-    smtp_password: your-password-here

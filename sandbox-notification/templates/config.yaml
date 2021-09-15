@@ -6,7 +6,7 @@ data:
   .sandbox_notification.yaml: |
     smtp_server: smtp.gmail.com
     smtp_port: 587
-    sender_email: your-email-here
+    sender_email: ghga.notification@gmail.com
 
     rabbitmq_host: ghga-rabbitmq.foundation
     rabbitmq_port: 5672

@@ -7,11 +7,18 @@ data:
     host: "0.0.0.0"
     port: 8080
     log_level: info
+
     drs_self_url: drs://localhost:8080/
     api_route: /ga4gh/drs/v1
     custom_spec_url: https://sandbox.api.ghga-dev.de/storage/ga4gh/drs/v1/openapi.yaml
     db_url: postgresql://admin:admin@sandbox-storage-postgresql:5432/storage?sslmode=disable
+
     cors_allowed_origins: ["*"]
     cors_allow_credentials: true
     cors_allowed_methods: ["*"]
     cors_allowed_headers: ["*"]
+
+    
+    rabbitmq_host: ghga-rabbitmq.foundation
+    rabbitmq_port: 5672
+    topic_name_download_requested: download_request

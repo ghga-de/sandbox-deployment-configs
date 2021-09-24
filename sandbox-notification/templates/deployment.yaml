@@ -44,4 +44,3 @@ spec:
       - name: config
         configMap:
           name: {{ .Chart.Name }}
-sandbox-notification-smtp-credentials
